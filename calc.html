@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculus Hub</title>
+  <link rel="stylesheet" href="calc.css">
+</head>
+
+<body>
+  <header>
+    <h1>Calculator ni Jeson</h1>
+    <p>Learn and Practice Derivatives, Integrals, and More</p>
+  </header>
+
+  <nav>
+    <a href="#derivatives">Derivatives</a>
+    <a href="#integrals">Integrals</a>
+    <a href="#limits">Limits</a>
+  </nav>
+
+  <main>
+    <section id="derivatives">
+      <h2>Derivative Calculator</h2>
+      <p>Try: <code>3x^2 + 2x + 1</code> or <code>sqrt(x)</code></p>
+      <div class="input-row">
+        <input type="text" id="derivativeInput" placeholder="Enter function f(x)">
+        <button type="button" onclick="insertSqrt('derivativeInput')">√</button>
+        <button type="button" onclick="insertPower('derivativeInput')">^</button>
+        <button onclick="calculateDerivative()">Calculate</button>
+      </div>
+      <div class="output" id="derivativeResult"></div>
+    </section>
+
+    <section id="integrals">
+      <h2>Definite Integral Calculator</h2>
+      <div class="input-row">
+        <input type="text" id="integralFunction" placeholder="Enter f(x)">
+        <button type="button" onclick="insertSqrt('integralFunction')">√</button>
+        <button type="button" onclick="insertPower('integralFunction')">^</button>
+        <input type="number" id="a" placeholder="a">
+        <input type="number" id="b" placeholder="b">
+        <button onclick="calculateIntegral()">Calculate</button>
+      </div>
+      <div class="output" id="integralResult"></div>
+    </section>
+
+    <section id="limits">
+      <h2>Limit Calculator</h2>
+      <div class="input-row">
+        <input type="text" id="limitFunction" placeholder="Enter f(x)">
+        <button type="button" onclick="insertSqrt('limitFunction')">√</button>
+        <button type="button" onclick="insertPower('limitFunction')">^</button>
+        <input type="number" id="limitPoint" placeholder="x → a">
+        <button onclick="calculateLimit()">Calculate</button>
+      </div>
+      <div class="output" id="limitResult"></div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.3.0/math.min.js"></script>
+  <script src="calc.js"></script>
+</body>
+
+</html>
